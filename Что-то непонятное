@@ -1,0 +1,53 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+
+{
+	setlocale(LC_ALL, "Rus");
+	int a;
+
+	int b = 1;
+
+	int c = 0;
+
+	cout<<"введите число"<<endl;
+
+	cin>>a;
+
+	for (int z = 1;z < a + 1;++z) {
+
+		b = b * z;
+
+	}
+
+	cout<<"факториал: "<<b<<endl;
+
+	cout<<"простные числа: "<<1<<" ";
+
+	for (int i = 1;i < a + 1;++i) {
+
+		for (int q = 1;q < i + 1;++q) {
+
+			if (i % q == 0) {
+
+				c = c + 1;
+
+			}
+
+		}
+
+		if (c == 2) {
+
+			cout<<i<<" ";
+
+		}
+
+		c = 0;
+
+	}
+
+	return 0;
+
+}
